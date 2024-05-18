@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-st-nucleo-l031k6", "id": "nucleo", "top": 58.81, "left": 80.35, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -82.97, "left": -118.4, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 207.8,
+      "left": -38.4,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "$serialMonitor:TX", "nucleo:VCP_RX", "", [] ],
+    [ "$serialMonitor:RX", "nucleo:VCP_TX", "", [] ],
+    [ "nucleo:D2", "lcd1:D7", "magenta", [ "h0" ] ],
+    [ "nucleo:D3", "lcd1:D6", "magenta", [ "h0" ] ],
+    [ "nucleo:D4", "lcd1:D5", "magenta", [ "h0" ] ],
+    [ "nucleo:D5", "lcd1:D4", "magenta", [ "h0" ] ],
+    [ "nucleo:D6", "lcd1:E", "blue", [ "h0" ] ],
+    [ "nucleo:GND.1", "lcd1:K", "black", [ "h0" ] ],
+    [ "nucleo:GND.1", "lcd1:VSS", "black", [ "h0" ] ],
+    [ "nucleo:GND.1", "lcd1:RW", "black", [ "h0" ] ],
+    [ "nucleo:VIN", "lcd1:VDD", "red", [ "v-9.6", "h-221.5" ] ],
+    [ "nucleo:VIN", "lcd1:V0", "red", [ "v-9.6", "h-211.5" ] ],
+    [ "nucleo:VIN", "lcd1:A", "red", [ "v-9.6", "h-96.6", "v-38.4" ] ],
+    [ "btn2:1.r", "nucleo:D11", "gold", [ "v0" ] ],
+    [ "lcd1:RS", "nucleo:D9", "blue", [ "v0" ] ],
+    [ "nucleo:GND.1", "btn2:2.l", "black", [ "h-172.8", "v105.6" ] ]
+  ],
+  "dependencies": {}
+}
