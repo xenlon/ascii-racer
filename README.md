@@ -1,2 +1,1 @@
-# ascii-racer
-Simple racing game for 16x2 LCD and STM32
+The player has to dodge the incoming cars by pressing the push button. Each car dodged earns one points which decides the end score. This is a simple beginner project for learning basics of embedded programming and can be built with low cost. 
